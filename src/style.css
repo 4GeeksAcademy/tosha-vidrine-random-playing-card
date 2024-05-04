@@ -1,1 +1,11 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: black;
+}
+card {
+  background-color: antiquewhite;
+}
+button {
+  background-color: blue;
+}
