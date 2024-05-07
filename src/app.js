@@ -37,9 +37,9 @@ function generateRandomCard() {
   for (let suit of document.querySelectorAll(".suit")){
     suit.innerHTML = randomSuit;
     if (randomSuit === "\u2665" || randomSuit === "\u2666") {
-      suit.style.color = "red"; // Set color to red for heart and diamond suits
+      suit.style.color = "red"; 
     } else {
-      suit.style.color = ""; // Reset color for other suits
+      suit.style.color = ""; 
     }
   }
 }
