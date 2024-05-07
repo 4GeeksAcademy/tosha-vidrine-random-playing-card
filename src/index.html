@@ -1,65 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Card Generator</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-    <link rel="shortcut icon" href="./4geeks.ico" />
-    <style>
-      .container-fluid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Card Generator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+  <link rel="shortcut icon" href="./4geeks.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<style><div class="heart"></div>
+  <div class="diamond"></div></style>
 
-      .card {
-        margin-top: 20px;
-        width: 18rem;
-        height: 25rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      .button {
-        margin-top: 20px;
-      }
-    </style>
-  </head>
-  <body>
-  
-    <div class="container-fluid text-center">
-      <h1>Random Card Generator</h1>
-     
-      <div id="randomCard" class="card">
-        <div class="card-header">
-          <h3 class="suit">
-            <span class="card-top">&spades; &hearts; &diams; &clubs;</span>
-          </h3>
-        </div>
-        <div class="card-body">
-          <h1 class="value">Card Value</h1>
-        </div>
-        <div class="card-footer">
-          <h3 class="suit">
-            <span class="card-bottom">&spades; &hearts; &diams; &clubs;</span>
-          </h3>
-        </div>
+</head>
+<body>
+  <div class="container-fluid text-center">
+    <h1>Random Card Generator</h1>
+    <div id="randomCard" class="card">
+      <div class="card-header">
+        <span class="suit card-top"></span>
       </div>
-      
-      <div class="button">
-        <button id="btn"><h3>Draw Card</h3></button>
+      <div class="card-body">
+        <h1 class="value"></h1>
+      </div>
+      <div class="card-footer">
+        <span class="suit card-bottom"></span>
       </div>
     </div>
-
-    <script src="script.js"></script>
-  </body>
+    <button id="btn" class="btn btn-warning">Draw Card</button>
+  </div>
+  <script src="app.js"></script>
+</body>
 </html>

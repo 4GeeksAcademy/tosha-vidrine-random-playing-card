@@ -1,13 +1,11 @@
 import "bootstrap";
 import "./style.css";
-
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  document.querySelector("#btn").addEventListener("click", () => {
-    generateRandomCard();
-  });
+  generateRandomCard();
+  document.querySelector("#btn").addEventListener("click", generateRandomCard);
 };
 
 function generateRandomCard() {
@@ -37,7 +35,11 @@ function generateRandomCard() {
   document.querySelector(".value").innerHTML = randomValue;
  
   for (let suit of document.querySelectorAll(".suit")){
-    suit.innerHTML=randomSuit;
+    suit.innerHTML = randomSuit;
+    if (randomSuit === "\u2665" || randomSuit === "\u2666") {
+      suit.style.color = "red"; // Set color to red for heart and diamond suits
+    } else {
+      suit.style.color = ""; // Reset color for other suits
+    }
   }
 }
-

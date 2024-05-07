@@ -1,43 +1,78 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+/* .container-fluid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+} */
+
 body {
-  background-color: rgb(24, 127, 65); 
+  background-color: rgb(24, 127, 65);
 }
 
 .card {
-  background-color: white; 
-  border: 2px solid black; 
-  border-radius: 10px; 
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-  width: 18rem; 
-  height: 25rem; 
-  display: flex; 
-  flex-direction: column; 
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 18rem;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .card-top {
-  display: flex; 
+  display: flex;
   justify-content: flex-start;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 .card-body {
-  flex-grow: 1; 
+  flex-grow: 1;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  font-family: "Times New Roman", Times, serif; 
-  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica Neue";
+  
 }
 
 .card-bottom {
-  display: flex; 
+  display: flex;
   justify-content: flex-end;
-  font-size:2rem;
+  font-size: 4rem;
 }
 
 .button {
-  background-color: blue!important;
-  border-radius: 5px; 
-  cursor: pointer; 
+  background-color: blue !important;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Indie Flower', cursive, sans-serif !important;
+  /* margin:auto; */
 }
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 20px;
+  }
+  h1 {
+    font-family: "Bangers", cursive;
+    color: purple;
+    font-size: 8rem;
+  }
+  .heart:before {
+    content: "\2665"; 
+    color: red;
+  }
+  
+  .diamond:before {
+    content: "\2666"; 
+  }
+  
