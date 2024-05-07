@@ -1,4 +1,3 @@
-/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 
@@ -7,12 +6,14 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   document.querySelector("#btn").addEventListener("click", () => {
-    document.querySelector("#randomCard").innerHTML = generateRandomCard();
+    generateRandomCard();
   });
+};
 
-  const suits = ["spades", "hearts", "diamonds", "clubs"];
+function generateRandomCard() {
+  const suits = ["\u2660", "\u2665", "\u2666", "\u2663"];
   const values = [
-    "Ace",
+    "A",
     "2",
     "3",
     "4",
@@ -22,9 +23,9 @@ window.onload = function() {
     "8",
     "9",
     "10",
-    "jack",
-    "queen",
-    "king"
+    "J",
+    "Q",
+    "K"
   ];
 
   const randomSuitIndex = Math.floor(Math.random() * suits.length);
@@ -33,6 +34,10 @@ window.onload = function() {
   const randomSuit = suits[randomSuitIndex];
   const randomValue = values[randomValueIndex];
 
-  console.log(`Random Card: ${randomValue} of ${randomSuit}`);
-  return `${randomValue} of ${randomSuit}`;
-};
+  document.querySelector(".value").innerHTML = randomValue;
+ 
+  for (let suit of document.querySelectorAll(".suit")){
+    suit.innerHTML=randomSuit;
+  }
+}
+
